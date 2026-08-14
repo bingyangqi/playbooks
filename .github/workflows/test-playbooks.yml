@@ -1,14 +1,14 @@
 # Copyright Advanced Micro Devices, Inc.
 # 
 # SPDX-License-Identifier: MIT
-
+runs-on: self-hosted
 name: Test Playbooks
 
 on:
   schedule:
     - cron: '0 8 * * *'    # 01:00 PDT (UTC-7); 02:00 PST (UTC-8)
   workflow_dispatch:
-    inputs:
+    inputs: 
       playbook_id:
         description: 'Specific playbook ID to test (leave empty to test all playbooks)'
         required: false
