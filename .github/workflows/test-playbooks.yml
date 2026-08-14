@@ -41,7 +41,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: '3.12'
 
       # On a PR, only entries whose extracted @test blocks (or assets) actually
       # changed are queued; prose-only edits queue nothing. The nightly cron
@@ -83,7 +83,7 @@ jobs:
           fetch-depth: 0    # real-commit replay needs history
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: '3.12'
       - name: Run selection regression tests
         run: python3 .github/scripts/test_build_test_matrix.py
 
